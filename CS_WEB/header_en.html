@@ -20,11 +20,6 @@
 		var mm = D.getMonth()+1;
 		var dd = D.getDate();
 		$('#banner-content-right-navi').append('<p>'+yy+'/'+mm+'/'+dd+'</p>');
-		$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Jinan,CN&units=metric&lang=en_US&callback=?",
-			function(obj) {
-				$('#banner-content-right-navi').append('<p>Jinan ' + obj.weather[0].main + ' ' +
-				Math.round(obj.main.temp) + '℃</p>');
-			});
 	});
 
 	function renderMenu(data, highlight) {

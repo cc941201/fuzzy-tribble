@@ -21,11 +21,6 @@
 		var mm = D.getMonth()+1;
 		var dd = D.getDate();
 		$('#banner-content-right-navi').append('<p>今天是'+yy+'年'+mm+'月'+dd+'日 农历'+GetLunarDay(yy,mm,dd)+'</p>');
-		$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Jinan,CN&units=metric&lang=zh_CN&callback=?",
-			function(obj) {
-				$('#banner-content-right-navi').append('<p>济南 ' + obj.weather[0].description + ' ' +
-				Math.round(obj.main.temp) + '℃ by OpenWeatherMap</p>');
-			});
 	});
 
 	function renderMenu(data, highlight) {
